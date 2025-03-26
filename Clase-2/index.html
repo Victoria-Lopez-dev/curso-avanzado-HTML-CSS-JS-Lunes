@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Clase-2</title>
+</head>
+<body> 
+    <h1>Video - Audio</h1>
+    <p class="texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, a.</p>
+
+<p class="texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, a.</p>
+<button onclick="contadorVuelta()">Click</button>    
+<section>
+       
+    </section>
+        <video controls  loop >
+            <source src="./assets/historia-Comp.mp4" type="video/mp4"/>
+            <source src="./assets/video2.ogv" type="video/ogg"/>
+        </video>
+        <!-- <video src="./assets/historia-Comp.mp4"></video> -->
+        <!-- <video src="./assets/video2.ogv"></video> -->
+    </section>
+    
+    <section>
+      <video src="./assets/historia-Comp.mp4" id="video2"></video>
+      <div class="controles">
+        <button onclick="iniciar()">PLAY</button>
+        <button onclick="pausar()">PAUSE</button>
+        <button onclick="mutear()" id="botonMute">Sonido On</button>
+        <p>Duracion:<span class="tiempo"></span></p>
+        <p>Tiempo actual:<span class="actual"></span></p>
+      </div>
+    </section>
+    <!-- <script src="./repaso.js"></script> -->
+    <script src="./script.js"></script>
+</body>
+</html>
+
+<!--
+<video></video>
+mp4 - ogv
+<audio></audio>
+    mp3 - ogg
+
+atributos :
+
+controls -> barra de navegacion 
+loop 
+autoplay
+
+-->

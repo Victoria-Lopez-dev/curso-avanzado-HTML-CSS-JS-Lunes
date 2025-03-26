@@ -1,0 +1,17 @@
+section{
+    margin-bottom: 20px;
+    background-color:  #f89fbe;
+    border: 2px solid darkblue;
+    width: 80%;
+    padding: 30px;
+}
+video{
+    width: 500px;
+    border: 2px solid black;
+}
+.controles{
+    background-color: blue;
+    color: white;
+    display: flex;
+    gap: 20px;
+}

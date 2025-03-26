@@ -1,0 +1,42 @@
+/*comentario*/
+
+/*
+    selectores : clase(.clase) - id(#id) - etiqueta - convinados
+
+    sintaxis:
+
+    selector{
+        propiedad:valor;
+        propiedad:valor;
+        propiedad:valor;
+    }
+*/
+
+.claseA{
+    color: green;
+    border: 2px solid black;
+}
+
+#boton1{
+    background-color: cadetblue;
+    padding: 20px;
+}
+
+h1{
+    font-size: 2em;
+    margin-bottom: 30px;
+}
+
+/* simbolos: > , + ~ */
+
+
+div>p{
+    background-color: crimson;
+}
+
+p~.claseA{
+    color: red;
+}
+img{
+    width: 50%;
+}
