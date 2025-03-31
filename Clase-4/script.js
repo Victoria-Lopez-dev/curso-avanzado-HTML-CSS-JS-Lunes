@@ -10,3 +10,5 @@ const pausar=()=>{
     let padre=document.querySelector(".padre");
     padre.style.animation="none"
 }
+
+console.log("un cambio nuevo...")
