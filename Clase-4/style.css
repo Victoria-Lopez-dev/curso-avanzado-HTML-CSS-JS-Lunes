@@ -1,0 +1,177 @@
+
+p{
+    background-color: chartreuse;
+    padding: 40px;
+    width: fit-content;
+    border: 2px solid black;
+}
+section{
+    background-color: darkcyan;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    perspective:800px ;/* indicamos la ubicacion del plano en el padre para que funcione la 3er dimenaion */
+    perspective-origin: top;/* desde donde miramos : top - center -bottom*/
+}
+.translate{
+    background-color: brown;
+    transform: translateZ(200px);
+    transition: transform 4s cubic-bezier(.67,.02,0,.97),background-color 4s;
+}
+.translate:hover{
+    transform: translate(100px,20px);
+    background-color: yellow;
+}
+.rotate{
+    transform: rotateX(-45deg);
+}
+.scale{
+    transform: scale(3,0.5);
+}
+.skew{
+    transform: skewY(45deg);
+}
+
+.combo:hover{
+    transition: transform 4s ;
+    transform: rotateY(20deg) translateZ(-100px);
+}
+
+/*------------------------------*/
+.cubo{
+    width: 300px;
+    height: 300px;
+    background-color: cornflowerblue;
+    border: 2px solid blue;
+    margin-bottom: 100px;
+    margin-left: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px;
+    perspective-origin: bottom;
+}
+.padre{
+    border: 2px solid violet;
+    background-color: pink;
+    width: 200px;
+    height: 200px;
+    transform: rotateY(45deg);
+    transform-style: preserve-3d;/* traslada la perspectiva ddel "cubo al hijo "p"*/
+    animation:mover1 10s infinite alternate ;
+    /*
+    animation-name: mover1;
+    animation-duration: 4s
+    
+    */
+}
+.animacionColor{
+    animation-name: colores;
+    animation-duration: 7s;
+    animation-delay: 2s;
+    animation-iteration-count: 4;
+}
+#contenido{
+    transform: rotateY(90deg);
+    height: 120px;
+    margin: 0;
+}
+h1{
+    text-shadow:3px 3px #f90888;
+}
+h1:hover{
+    text-shadow: none;
+    transform: translate(3px,3px);
+}
+
+button{
+    box-shadow:3px 3px gray;
+    margin-bottom: 100px;
+}
+button:active{
+    box-shadow:none;
+    transform: translate(3px,3px);
+}
+/*
+Translate -> traslada al elemento - lo mueve 
+*  translateX(x) - translateY(y) - translate(x,y) -
+* unidades de distancia: px -vw-vh-%
+
+
+Transition -> transicion 
+* que propiedad/es
+* cuanto va a durar
+* la velocidad -> ease ease-in  ease-out ease-in-out  curbic-bezier()
+* delay al arrancar
+
+transition lo coloco en el selector cada cambio de esa propiedad le aplica la transicion
+si lo coloco dentro de la pseudo clase , solo aplica en un solo sentido 
+
+Rotate -> rotar 
+* rotate(z) rotateY(y) rotateX(x)
+* grados : deg (degree) 
+* signos positivos gira hacia la derecha
+* signo negativo gira hacia la izquierda
+
+
+ perspective -> en elemento padre 
+
+Scale -> escalar
+
+*scaleX(x) scaleY(y) scale(x,y) scale(xy
+* numeros sin unidad
+
+Skew -> deforma la imagen
+
+* skew(x,y) skewY(y) skewX(x) 
+*deg como unidad 
+
+
+Animation -> cuadros (frames)
+
+animation -> aplicacion 
+animation-duration -> segundos (s) milisegundos(ms) 
+animation-delay -> segundos (s) milisegundos(ms)
+animation-fill-mode
+animation-direction -> reverse | alternate | alternate-reverse
+animation-iteration-count -> numero - infinite
+animation-timing-function -> ease,... cubic-bezier() (igual que transition)
+
+animation: name duration timing-function delay iteration-count direction fill-mode;
+
+
+por fuera del selector 
+@keyframes {} -> cuadros de la animacion - instancias 
+*/
+@keyframes mover1 {
+    from{
+        transform: rotateY(0deg);
+    }
+    to{
+        transform: rotateY(360deg) ;
+        border-color:red ;
+        border-radius: 10px;
+    }
+}
+
+@keyframes colores {
+    0%{
+        color: red;
+        
+    }
+    20%{
+        color: chartreuse;
+        font-size: 20px;
+    }
+    33%{
+        color: #f90888;
+        font-weight: bold;
+    }
+    66%{
+        background-color: cadetblue;
+    }   
+    100%{
+        color: blue;
+    }
+}
