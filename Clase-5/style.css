@@ -1,0 +1,51 @@
+body{
+    background-color: pink;
+}
+img{
+    width: 300px;
+}
+svg{
+    width: 500px;
+    height: 400px;
+    display: block;
+    margin-left: 100px;
+}
+.svg1{
+    border: 2px solid black;
+}
+.rotar{
+    transform: rotate(45deg);
+    transition: transform 4s;
+}
+.rectangulo{
+    animation:traslado 5s 3 alternate;
+}
+
+.latir{
+    animation: latirCorazon 2s infinite alternate;
+}
+@keyframes traslado {
+    from{
+        fill: blue;
+    }
+    to{
+        transform: translate(200px) rotate(20deg);
+        stroke:black
+    }
+}
+@keyframes latirCorazon {
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(1.2);
+    }
+}
+
+/*-------*/
+nav{
+    width: 100%;
+    background-color: cadetblue;
+    position: sticky;
+    top: 0;
+}
