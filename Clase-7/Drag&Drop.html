@@ -7,14 +7,14 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <h1 id="titulo" >Drag and Drop</h1>
+    <h1 id="titulo" draggable="true">Drag and Drop</h1>
     <h2 >Otro titulo</h2>
-    <div class="zona-destino" id="zona1">
+    <div ondrop="dropEvent(event)" class="zona-destino" id="zona1">
        <p> arrastar elemento aqui..</p>
     </div>
     <button >Enviar..</button>
-    <img  id="img1" src="./imagenes/imagen1.jpeg" alt="cohete">
-    <a href="https://www.google.com" >Ir a algun lado...</a>
+    <img ondragstart="almacenarInfo(event)" id="img1" src="./imagenes/imagen1.jpeg" alt="cientifica">
+    <a href="https://www.google.com" draggable="false">Ir a algun lado...</a>
     <script src="./d&d.js"></script>
 </body>
 </html>
