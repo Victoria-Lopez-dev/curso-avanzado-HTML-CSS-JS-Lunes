@@ -1,0 +1,10 @@
+[{
+    "producto":"silla",
+    "precio":20000
+},{
+    "producto":"mesa",
+    "precio":30000
+},{
+    "producto":"lampara",
+    "precio":40000
+}]
